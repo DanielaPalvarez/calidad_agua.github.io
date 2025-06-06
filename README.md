@@ -1,11 +1,11 @@
-
-# Sistema de Alerta Temprana para la Calidad del Agua en Sonora 🌊📍
+# Sistema de Alerta Temprana para la Calidad del Agua en Sonora 🌊
 
 Este repositorio contiene un sitio web interactivo que presenta el resultado del proyecto **Sistema de Alerta Temprana para la Calidad del Agua en Sonora**, desarrollado con el objetivo de detectar de forma automatizada eventos atípicos en parámetros de calidad del agua en el estado de Sonora, México.
 
 ## 🌐 Enlace al sitio web
+
 Accede al sitio en GitHub Pages aquí:  
-➡️ https://danielapalvarez.github.io/calidad_agua.github.io/
+https://danielapalvarez.github.io/calidad_agua.github.io/
 
 ## 🧪 Objetivo del proyecto
 
@@ -45,21 +45,6 @@ calidad_agua.github.io/
 │   └── vendor/
 └── README.md
 ```
-
----
-
-## 📸 Vista previa
-
-Puedes ver un adelanto del mapa en la sección **Model** y capturas gráficas del análisis en la sección **Información**.
-
----
-
-## 📬 Contacto
-
-Este proyecto fue desarrollado por **Equipo BUZZ**.  
-Si deseas colaborar, mejorar este proyecto o tienes dudas:
-
-📧 danielapalvarez@gmail.com (o tu correo profesional)
 
 ---
 
