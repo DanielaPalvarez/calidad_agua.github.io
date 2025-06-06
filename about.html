@@ -70,6 +70,9 @@
           <img src="assets/img/ima1.jpeg" alt="Diagrama de limpieza de datos" class="img-fluid" style="max-width: 800px;">
         </div>
         <p>Para organizar el análisis, se diseñó una estrategia de clasificación de parámetros agrupándolos por categoría temática, como alcalinidad, bacteriológico, oxígeno, orgánico, nitrógeno y toxicidad. Esta clasificación se realizó cruzando las columnas del dataset con una tabla de simbología que describe cada parámetro, y posteriormente se aplicó un modelo de clustering KMeans para reforzar la agrupación por similitud de variables. Esto permitió la creación de subconjuntos temáticos para análisis independientes y detallados por tipo de contaminante.</p>
+        <div class="text-center my-4">
+          <img src="assets/img/ima2.jpeg" alt="Diagrama de limpieza de datos" class="img-fluid" style="max-width: 800px;">
+        </div>
         <p>Una vez segmentados los datos, se implementó una técnica robusta de detección de valores atípicos utilizando el rango intercuartílico (IQR). Para cada parámetro dentro de su respectivo subconjunto, se identificaron aquellas mediciones que caían fuera del rango aceptado, lo que fue interpretado como una posible alerta. Cada evento atípico fue clasificado y almacenado con su respectivo sitio, coordenadas, parámetro implicado, valor detectado, año y categoría.</p>
         <p>Con los eventos atípicos identificados, se generó un sistema de alertas que consolidó todas las observaciones inusuales en un solo repositorio. Este sistema permite saber qué municipios, años y sitios han registrado alertas, así como el tipo de contaminante implicado. Esto sirvió como base para desarrollar visualizaciones interactivas y mapas que permiten monitorear la distribución espacial de las alertas y detectar patrones recurrentes o críticos.</p>
       </div>
