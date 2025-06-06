@@ -63,45 +63,48 @@
       <div class="col-lg-12" data-aos="fade-up">
         <h2 class="mb-4">Sistema de Alerta Temprana para la Calidad del Agua en Sonora</h2>
         <p><strong>Detección Automatizada de Anomalías</strong></p>
+
         <p>Este proyecto tuvo como objetivo desarrollar un sistema automatizado de alerta temprana para detectar eventos atípicos en la calidad del agua en el estado de Sonora. Se buscó identificar posibles contaminaciones mediante técnicas de análisis de datos, detección de outliers y modelos de referencia, con el fin de apoyar a las autoridades y proteger a las comunidades potencialmente afectadas.</p>
-         <div class="text-center my-4">
-          <img src="assets/img/ima3.jpeg" alt="Diagrama de limpieza de datos" class="img-fluid" style="max-width: 2000px;">
+
+        <div class="text-center my-4">
+          <img src="assets/img/ima3.jpeg" alt="Visualización general del sistema" class="img-fluid" style="max-width: 2000px;">
         </div>
+
         <p>Comenzamos el proyecto con la recopilación y fusión de dos bases de datos fundamentales: los resultados de monitoreo de calidad del agua por sitio y la información geográfica de los sitios de muestreo. Estas bases fueron integradas utilizando la columna clave "CLAVE SITIO", permitiendo relacionar los resultados de laboratorio con su contexto geográfico (coordenadas, municipio, tipo de cuerpo de agua, etc.).</p>
+
         <p>Posteriormente, se procedió a una fase de limpieza y depuración de datos. Dado que muchas variables no estaban presentes en todos los sitios debido a diferencias en los elementos analizados, se optó por no eliminar columnas con valores faltantes, ya que su ausencia era lógica según el sitio y el tipo de análisis realizado. Se evaluaron patrones de datos nulos por columna para respaldar esta decisión.</p>
+
         <div class="text-center my-4">
-          <img src="assets/img/ima1.jpeg" alt="Diagrama de limpieza de datos" class="img-fluid" style="max-width: 2000px;">
+          <img src="assets/img/ima1.jpeg" alt="Proceso de limpieza de datos" class="img-fluid" style="max-width: 2000px;">
         </div>
+
         <div class="text-center my-4">
-          <img src="assets/img/ima4.jpeg" alt="Diagrama de limpieza de datos" class="img-fluid" style="max-width: 2000px;">
+          <img src="assets/img/ima4.jpeg" alt="Muestreo o parámetros" class="img-fluid" style="max-width: 2000px;">
         </div>
+
         <p>Para organizar el análisis, se diseñó una estrategia de clasificación de parámetros agrupándolos por categoría temática, como alcalinidad, bacteriológico, oxígeno, orgánico, nitrógeno y toxicidad. Esta clasificación se realizó cruzando las columnas del dataset con una tabla de simbología que describe cada parámetro, y posteriormente se aplicó un modelo de clustering KMeans para reforzar la agrupación por similitud de variables. Esto permitió la creación de subconjuntos temáticos para análisis independientes y detallados por tipo de contaminante.</p>
+
         <div class="text-center my-4">
-          <img src="assets/img/ima2.jpeg" alt="Diagrama de limpieza de datos" class="img-fluid" style="max-width: 809px;">
+          <img src="assets/img/ima2.jpeg" alt="Agrupación por categorías" class="img-fluid" style="max-width: 809px;">
         </div>
-        <p>🔵 Alcalinidad
-Exceso: Puede causar incrustaciones en tuberías y equipos. Baja alcalinidad puede provocar corrosión en las tuberías.
 
-🔴 Bacteriológico
-Contaminación bacteriológica (presencia de bacterias patógenas) indica riesgo para la salud humana, infecciones y enfermedades transmitidas por el agua.
+        <ul>
+          <li>🔵 <strong>Alcalinidad:</strong> Puede causar incrustaciones o corrosión en tuberías.</li>
+          <li>🔴 <strong>Bacteriológico:</strong> Riesgo de infecciones por bacterias patógenas.</li>
+          <li>🟢 <strong>Oxígeno:</strong> Bajos niveles afectan la vida acuática, provocando mortandad.</li>
+          <li>🟣 <strong>Orgánico:</strong> Alta DBO promueve bacterias y reduce el oxígeno disponible.</li>
+          <li>🟠 <strong>Nitrógeno:</strong> Provoca eutrofización y problemas de salud como el síndrome del bebé azul.</li>
+          <li>⚫ <strong>Toxicidad:</strong> Presencia de metales pesados o químicos peligrosos.</li>
+        </ul>
 
-🟢 Oxígeno
-Niveles bajos de oxígeno disuelto afectan la vida acuática. Sin oxígeno, los organismos acuáticos no pueden sobrevivir y puede haber mortandad de peces.
-
-🟣 Orgánico
-Altos niveles de materia orgánica pueden causar demanda bioquímica de oxígeno (DBO) elevada, promoviendo el crecimiento de bacterias y disminuyendo el oxígeno disponible para otros seres vivos.
-
-🟠 Nitrógeno
-En exceso, el nitrógeno (nitratos y nitritos) puede causar eutrofización, promoviendo el crecimiento excesivo de algas y afectando la vida acuática. También puede causar problemas de salud (methemoglobinemia o “síndrome del bebé azul” en infantes).
-
-⚫ Toxicidad
-Sustancias tóxicas como metales pesados o productos químicos peligrosos pueden envenenar a los organismos acuáticos y hacer el agua peligrosa para consumo humano.</p>
         <p>Una vez segmentados los datos, se implementó una técnica robusta de detección de valores atípicos utilizando el rango intercuartílico (IQR). Para cada parámetro dentro de su respectivo subconjunto, se identificaron aquellas mediciones que caían fuera del rango aceptado, lo que fue interpretado como una posible alerta. Cada evento atípico fue clasificado y almacenado con su respectivo sitio, coordenadas, parámetro implicado, valor detectado, año y categoría.</p>
+
         <p>Con los eventos atípicos identificados, se generó un sistema de alertas que consolidó todas las observaciones inusuales en un solo repositorio. Este sistema permite saber qué municipios, años y sitios han registrado alertas, así como el tipo de contaminante implicado. Esto sirvió como base para desarrollar visualizaciones interactivas y mapas que permiten monitorear la distribución espacial de las alertas y detectar patrones recurrentes o críticos.</p>
       </div>
     </div>
   </section>
 </main>
+
 
 
 
